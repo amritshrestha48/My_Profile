@@ -1,12 +1,13 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
+    background: #f4f4f9;
     margin: 0;
     padding: 0;
+    color: #333;
+    transition: background-color 0.3s, color 0.3s;
 }
 
-/* Header */
 header {
     background: #343a40;
     color: white;
@@ -21,27 +22,20 @@ header h1 {
 
 header h2 {
     font-size: 1.5rem;
-    margin-bottom: 20px;
 }
 
-header .nav {
-    margin-top: 20px;
-}
-
-header .nav-item .nav-link {
+.nav-link {
     color: white;
     font-size: 1.1rem;
     padding: 10px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
-header .nav-item .nav-link:hover {
+.nav-link:hover {
     background-color: #007bff;
-    color: white;
     border-radius: 30px;
 }
 
-/* Section Styling */
 .section-heading {
     font-size: 2.5rem;
     font-weight: bold;
@@ -53,10 +47,9 @@ section {
     padding: 60px 0;
 }
 
-/* About Section */
 #about {
     text-align: center;
-    background-color: #ffffff;
+    background: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
 }
 
@@ -75,7 +68,6 @@ section {
     line-height: 1.8;
 }
 
-/* Project Section */
 #projects {
     background-color: #f9f9f9;
 }
@@ -83,7 +75,7 @@ section {
 .card {
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
 .card:hover {
@@ -110,22 +102,21 @@ section {
     color: #777;
 }
 
-.card-body .btn {
+.btn {
     background-color: #007bff;
     color: white;
     font-weight: bold;
     border-radius: 5px;
     padding: 10px 20px;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
 }
 
-.card-body .btn:hover {
+.btn:hover {
     background-color: #0056b3;
 }
 
-/* Footer */
 footer {
-    background-color: #343a40;
+    background: #343a40;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -141,52 +132,30 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    header h2 {
-        font-size: 1.2rem;
-    }
-
-    .section-heading {
-        font-size: 2rem;
-    }
-
-    .card img {
-        max-height: 150px;
-    }
+    header h1 { font-size: 2.5rem; }
+    header h2 { font-size: 1.2rem; }
+    .section-heading { font-size: 2rem; }
+    .card img { max-height: 150px; }
 }
 
 @media (max-width: 576px) {
-    header h1 {
-        font-size: 2rem;
-    }
-
-    header h2 {
-        font-size: 1rem;
-    }
-
-    .section-heading {
-        font-size: 1.8rem;
-    }
+    header h1 { font-size: 2rem; }
+    header h2 { font-size: 1rem; }
+    .section-heading { font-size: 1.8rem; }
 }
 
-/* Button Bar */
 .button-bar {
     display: inline-block;
-    background-color: #f0f0f0;
+    background: #f0f0f0;
     border-radius: 20px;
     padding: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-    /* Fixed or Sticky positioning as needed */
-    position: fixed; 
-    bottom: 20px; 
-    left: 50%; 
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
     transform: translateX(-50%);
-    z-index: 1000; /* Ensure it's above other elements */
+    z-index: 1000;
 }
 
 .button-bar ul {
@@ -206,67 +175,60 @@ footer a:hover {
     padding: 10px;
     text-decoration: none;
     color: #333;
-    transition: all 0.3s ease; /* Add smooth transition */
+    transition: all 0.3s;
 }
 
 .button-bar a:hover {
-    background-color: #e0e0e0; /* Highlight on hover */
-    border-radius: 50%; /* Make it a circle */
+    background-color: #e0e0e0;
+    border-radius: 50%;
 }
 
-/* Icon Styles (Use Font Awesome or your custom icons) */
-.icon-home { /* Example using Font Awesome */
-    font-size: 1.2em; 
+.icon-home, .icon-github, .icon-linkedin, .icon-file, .icon-light {
+    font-size: 1.2em;
 }
-.icon-github { font-size: 1.2em; }
-.icon-linkedin { font-size: 1.2em; }
-.icon-file { font-size: 1.2em; }
-.icon-light { font-size: 1.2em; }
-/* Global Styles */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f9;
-    margin: 0;
-    padding: 0;
-    color: #333; /* Default text color */
-}
-
-/* Header */
-header {
-    background: #343a40;
-    color: white;
-    padding: 40px 0;
-    text-align: center;
-}
-
-/* ... (Rest of your CSS) ... */
 
 /* Dark Mode Styles */
-body.dark-mode {
-    background-color: #222;
-    color: #eee;
+body.dark-mode,
+body.dark-mode header,
+body.dark-mode footer,
+body.dark-mode #contact,
+body.dark-mode #about,
+body.dark-mode #projects,
+body.dark-mode * {
+    background-color: #333 !important;
+    color: white !important;
 }
 
-body.dark-mode header {
-    background-color: #333;
-}
-
-body.dark-mode .card {
-    background-color: #333;
-    color: #eee;
-}
-
-body.dark-mode .card-body h3 {
-    color: #eee;
-}
-
-body.dark-mode .card-body p {
-    color: #ccc;
-}
-
+/* Enhanced Box Visibility in Dark Mode */
+body.dark-mode .card,
 body.dark-mode .button-bar {
-    background-color: #333;
+    border: 1px solid #555 !important;
 }
-body.dark-mode .button-bar ul li a{
-    color:#eee;
+
+body.dark-mode .card{
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.2) !important;
+}
+
+body.dark-mode #about, body.dark-mode #projects{
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05) !important;
+    border: none !important;
+}
+
+body.dark-mode .button-bar{
+    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2) !important;
+}
+
+/* Specific exceptions to the white text */
+body.dark-mode .nav-link:hover,
+body.dark-mode .btn:hover,
+body.dark-mode .button-bar a:hover{
+    color: black !important;
+}
+
+body.dark-mode .button-bar{
+    background-color: #555 !important;
+}
+
+body.dark-mode .button-bar a{
+    color: white !important;
 }
