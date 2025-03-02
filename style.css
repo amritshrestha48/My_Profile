@@ -1,3 +1,86 @@
+/* Combined CSS Code */
+
+/* Loader Styles */
+#loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure loader is on top */
+}
+
+#loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-radius: 50%;
+    border-top: 10px solid #3498db; /* Blue */
+    width: 80px;
+    height: 80px;
+    animation: spin 2s linear infinite;
+}
+/* ... other styles ... */
+
+#user-photo {
+    width: 190px; /* Reduced size */
+    height: 190px; /* Reduced size */
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+#loader {
+    width: 20px; /* Increased size for clarity */
+    height: 15px; /* Increased size for clarity */
+    overflow: hidden;
+    margin-bottom: 10px; /* Add spacing below the loader */
+}
+
+/* ... other styles ... */
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.loader-section {
+    position: absolute;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: #222;
+    z-index: 1000; /* Ensure sections are on top */
+}
+
+.loader-section.section-left {
+    left: 0;
+}
+
+.loader-section.section-right {
+    right: 0;
+}
+
+.welcome-text {
+    color: #fff;
+    margin-top: 20px;
+    z-index: 1000; /* Ensure text is on top */
+}
+
+#loading-percentage {
+    color: #fff;
+    margin-top: 10px;
+    font-size: 18px;
+    z-index: 1000; /* Ensure percentage is on top */
+}
+
+#content {
+    /* Your website content styles here */
+}
+
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
@@ -211,24 +294,5 @@ body.dark-mode .card{
 
 body.dark-mode #about, body.dark-mode #projects{
     box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05) !important;
-    border: none !important;
-}
-
-body.dark-mode .button-bar{
-    box-shadow: 0 2px 5px rgba(255, 255, 255, 0.2) !important;
-}
-
-/* Specific exceptions to the white text */
-body.dark-mode .nav-link:hover,
-body.dark-mode .btn:hover,
-body.dark-mode .button-bar a:hover{
-    color: black !important;
-}
-
-body.dark-mode .button-bar{
-    background-color: #555 !important;
-}
-
-body.dark-mode .button-bar a{
-    color: white !important;
-}
+    border: none !
+    
