@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> 
     <link rel="stylesheet" href="style.css"> 
+    <script src="script.js" defer></script> 
 </head>
 <body>
     <header class="text-center">
@@ -17,6 +18,7 @@
                 <ul class="nav justify-content-center">
                     <li class="nav-item"><a class="nav-link text-white" href="#about">About</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="#skills">Skills</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#work">Work Experience</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#projects">Projects</a></li>
                     <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
@@ -50,14 +52,20 @@
             <div class="row">
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <h3>Master's in Computer System and Information Technology</h3>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="NCIT-College.jpg" alt="NCIT Logo" class="img-fluid me-3" style="max-height: 50px;">
+                            <h3>Master's in Computer System and Information Technology</h3>
+                        </div>
                         <p><strong>NCIT College</strong> | 2024 - Present</p>
                         <p>Currently pursuing advanced studies in Artificial Intelligence, Machine Learning, and Data Science.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <h3>Bachelor's in Computer Application</h3>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="SchEMS.jpg" alt="SChEMS Logo" class="img-fluid me-3" style="max-height: 50px;">
+                            <h3>Bachelor's in Computer Application</h3>
+                        </div>
                         <p><strong>SChEMS College</strong> | 2019 - 2024</p>
                         <p>Focused on software development, data structures, and AI technologies.</p>
                     </div>
@@ -66,35 +74,79 @@
         </div>
     </section>
 
-    <section id="work" class="py-5 bg-light">
+    <section id="skills" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-heading">Skills</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <h3>Technical Skills</h3>
+                        <ul>
+                            <li>Python</li>
+                            <li>Machine Learning</li> 
+                            <li>Data Analysis</li>
+                            <li>AI Research</li>
+                            <li>HTML/CSS</li>
+                            <li>SQL</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <h3>Soft Skills</h3>
+                        <ul>
+                            <li>Problem-solving</li>
+                            <li>Communication</li>
+                            <li>Teamwork</li>
+                            <li>Critical thinking</li>
+                            <li>Time management</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="py-5">
         <div class="container">
             <h2 class="section-heading">Work Experience</h2>
             <div class="row">
                 <div class="col-md-6">
                     <div class="card p-3">
-                        <h3>IT Specialist</h3>
-                        <p><strong>Velox Labs</strong> | Jan 2024 - Present</p>
+                            <h3>IT Specialist</h3>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="Veloxlogo.jpeg" alt="Velox Logo" class="img-fluid me-3" style="max-height: 50px;">
+                            <p><strong>Velox Labs</strong> | Dec 2024 - Present</p>
+                        </div>
+
                         <p>Worked in the IT department to manage systems, troubleshoot issues, and optimize network performance.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card p-3">
                         <h3>Internship at Digital Banking Department</h3>
-                        <p><strong>Rastriya Banijya Bank</strong> | Dec 2023 - Feb 2024</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="RBB.jpg" alt="RBB Logo" class="img-fluid me-3" style="max-height: 50px;">
+                            <p><strong>Rastriya Banijya Bank</strong> | Dec 2023 - Feb 2024</p>
+                        </div>
                         <p>Provided customer support for networking, troubleshooting, and resolving technical issues for clients.</p>
                     </div>
                 </div>
                 <div class="col-md-6">
                     <div class="card p-3">
                         <h3>Technical Support Representative</h3>
-                        <p><strong>Subisu Cable Net Ltd</strong> | Dec 2021 - Jun 2022</p>
+                        <div class="d-flex align-items-center mb-2">
+                            <img src="Subisu.jpg" alt="Subisu Logo" class="img-fluid me-3" style="max-height: 50px;">
+                            <p><strong>Subisu Cable Net Ltd</strong> | Dec 2021 - Jun 2022</p>
+                        </div>
                         <p>Provided customer support for networking, troubleshooting, and resolving technical issues for clients.</p>
                     </div>
+                </div>
             </div>
         </div>
     </section>
 
-    <section id="projects" class="py-5">
+    <section id="projects" class="py-5 bg-light">
         <div class="container">
             <h2 class="section-heading">Projects</h2>
             <div class="row">
@@ -104,7 +156,7 @@
                         <div class="card-body">
                             <h3>Phone Number Tracking System</h3>
                             <p>Developed a phone tracking system leveraging GPS and real-time data processing.</p>
-                            <a href="#" class="btn btn-dark">View Project</a>
+                            <a href="#" class="btn btn-dark">View Project</a> 
                         </div>
                     </div>
                 </div>
@@ -114,7 +166,27 @@
                         <div class="card-body">
                             <h3>Rating Movie Recommendation System</h3>
                             <p>Designed and implemented a personalized movie recommendation system based on collaborative filtering.</p>
-                            <a href="#" class="btn btn-dark">View Project</a>
+                            <a href="#" class="btn btn-dark">View Project</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="project3.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h3>Netflix Data Analysis</h3>
+                            <p>Analyzed Netflix data to identify trends in content, genres, and audience preferences.</p>
+                            <a href="#" class="btn btn-dark">View Project</a> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="card p-3">
+                        <img src="project4.jpg" class="card-img-top" alt="Project 2">
+                        <div class="card-body">
+                            <h3>IPL2022 Data Analysis</h3>
+                            <p>Analyzed IPL2022 data to uncover team performance trends, player statistics, and match insights using data visualization.</p>
+                            <a href="#" class="btn btn-dark">View Project</a> 
                         </div>
                     </div>
                 </div>
@@ -132,10 +204,4 @@
     </section>
 
     <footer>
-        <p>&copy; 2024 Amrit Shrestha</p>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="script.js"></script> 
-</body>
-</html>
+        <p>&copy; 2024 Amrit Shrestha
