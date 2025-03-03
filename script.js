@@ -17,7 +17,7 @@ document.addEventListener('DOMContentLoaded', function() {
             loaderWrapper.style.display = 'none'; // Hide loader
             content.style.display = 'block'; // Show content
         }
-    }, 15); // Adjust timing as needed
+    }, 20); // Adjust timing as needed
 
 
     // Light/Dark Mode Toggle
