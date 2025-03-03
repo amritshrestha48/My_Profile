@@ -252,12 +252,12 @@ footer a:hover {
     display: block;
     padding: 10px;
     text-decoration: none;
-    color: #333;
+    color: #3c8f4ac1;
     transition: all 0.3s;
 }
 
 .button-bar a:hover {
-    background-color: #e0e0e0;
+    background-color: #eae6e6;
     border-radius: 50%;
 }
 
