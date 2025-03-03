@@ -110,7 +110,7 @@ header h2 {
 }
 
 .nav-link:hover {
-    background-color: #007bff;
+    background-color: #4c6c8e;
     border-radius: 30px;
 }
 
@@ -181,7 +181,7 @@ section {
 }
 
 .btn {
-    background-color: #007bff;
+    background-color: #567ba2;
     color: white;
     font-weight: bold;
     border-radius: 5px;
@@ -190,7 +190,7 @@ section {
 }
 
 .btn:hover {
-    background-color: #0056b3;
+    background-color: #42658a;
 }
 
 footer {
@@ -202,7 +202,7 @@ footer {
 }
 
 footer a {
-    color: #007bff;
+    color: #3c6b9c;
     text-decoration: none;
 }
 
@@ -304,5 +304,5 @@ body.dark-mode .card{
   }
   
   #scrollToTopBtn:hover {
-    background-color: #44484e; /* Darker blue on hover */
+    background-color: #375c93; /* Darker blue on hover */
   }
