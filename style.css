@@ -295,14 +295,14 @@ body.dark-mode .card{
     z-index: 20; 
     border: none; 
     outline: none; 
-    background-color: #0b65d2; /* Blue background color */
+    background-color: #060d16; /* Blue background color */
     color: rgba(249, 247, 247, 0.959); 
     cursor: pointer;
     padding: 10px; 
-    border-radius:50%; 
+    border-radius:60%; 
     font-size: 10px;
   }
   
   #scrollToTopBtn:hover {
-    background-color: #0056b3; /* Darker blue on hover */
+    background-color: #44484e; /* Darker blue on hover */
   }
