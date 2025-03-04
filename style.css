@@ -290,7 +290,7 @@ body.dark-mode .card{
 #scrollToTopBtn {
     display: none; /* Hidden by default */
     position: fixed; 
-    bottom: 45px;
+    bottom: 40px;
     right: 40px; 
     z-index: 20; 
     border: none; 
