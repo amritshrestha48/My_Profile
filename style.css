@@ -348,6 +348,31 @@ body {
 .project-description li {
     margin-bottom: 5px;
 }
+      .my-button {
+            display: inline-block;
+            padding: 0px 8px;
+            text-align: center;
+            text-decoration: none;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 10px;
+            background-color: #90EE90;
+            border: 2px solid #90EE90;
+            color: #000;
+            transition: background-color 0.3s ease, border-color 0.3s ease;
+            transform: translateY(2px);
+        }
+
+        .my-button:hover {
+            background-color: #7CFC00;
+            border-color: #7CFC00;
+        }
+
+        .my-button:active {
+            background-color: #6B8E23;
+            border-color: #6B8E23;
+            color: #fff;
+        }
 
 /* Footer / Social Icons */
 body {
