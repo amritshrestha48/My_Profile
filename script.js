@@ -133,5 +133,5 @@ document.addEventListener('DOMContentLoaded', function () {
       content.classList.remove('hidden');
       content.classList.add('visible');
     }
-  }, 30); // Adjust for speed
+  }, 30) // Adjust for speed
 });
