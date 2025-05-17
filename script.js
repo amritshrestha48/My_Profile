@@ -113,3 +113,25 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 // welcome
+
+document.addEventListener('DOMContentLoaded', function () {
+  const percentDisplay = document.getElementById('loading-percentage');
+  const progressBar = document.getElementById('progress-bar');
+  const loaderWrapper = document.getElementById('loader-wrapper');
+  const content = document.getElementById('content');
+
+  let percent = 0;
+  const interval = setInterval(() => {
+    percent++;
+    percentDisplay.textContent = percent + '%';
+    progressBar.style.width = percent + '%';
+
+    if (percent >= 100) {
+      clearInterval(interval);
+      loaderWrapper.style.display = 'none';
+      content.style.display = 'block';
+      content.classList.remove('hidden');
+      content.classList.add('visible');
+    }
+  }, 30); // Adjust for speed
+});
