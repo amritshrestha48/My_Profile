@@ -90,3 +90,24 @@ document.addEventListener('DOMContentLoaded', function() {
     // Run on window resize
     window.addEventListener('resize', updateLayout);
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+
+  // Show/hide the button based on scroll position
+  window.addEventListener('scroll', function() {
+    if (window.scrollY > 300) { // Adjust the scroll threshold as needed
+      scrollTopBtn.style.display = 'inline-block';
+    } else {
+      scrollTopBtn.style.display = 'none';
+    }
+  });
+
+  // Smooth scrolling to the top when the button is clicked
+  scrollTopBtn.addEventListener('click', function(e) {
+    e.preventDefault();
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
