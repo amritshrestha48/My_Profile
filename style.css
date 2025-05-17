@@ -9,6 +9,20 @@ body {
     flex-direction: column;
     align-items: flex-start; /* Align content to the left */
 }
+/* Example: Adding margin-bottom to each section */
+section {
+  margin-bottom: 8px; /* Adjust the value as needed */
+}
+
+/* Optional: Remove margin-bottom from the last section */
+section:last-child {
+  margin-bottom: 0;
+}
+
+/* Example: Adding margin-top to each section (except the first) */
+section + section { /* Selects all section elements that are preceded by another section element */
+  margin-top: 8px; /* Adjust the value as needed */
+}
 
 /* About Me Section */
 .about-me-section {
@@ -381,7 +395,7 @@ body {
 
 .contact-section h2 {
     color: #50fa7b; /* Highlight color */
-    font-size: 2.3em;
+    font-size: 2.4em;
     margin-top: 0;
     margin-bottom: 30px;
 }
