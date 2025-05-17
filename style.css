@@ -14,7 +14,7 @@ body {
 .about-me-section {
     display: flex;
     align-items: center;
-    margin-bottom: 60px;
+    margin-bottom: 100px;
     width: 100%;
     max-width: 900px; /* Adjust as needed */
 }
@@ -131,7 +131,7 @@ body {
 }
 
 .education-section h2 {
-    color: #a6e34d; /* Highlight color */
+    color: #50fa7b; /* Highlight color */
     font-size: 2.5em;
     margin-top: 0;
     margin-bottom: 30px;
@@ -206,7 +206,7 @@ body {
 }
 
 .work-section h2 {
-    color: #a6e34d; /* Highlight color */
+    color: #50fa7b; /* Highlight color */
     font-size: 2.5em;
     margin-top: 0;
     margin-bottom: 30px;
@@ -281,7 +281,7 @@ body {
 }
 
 .projects-section h2 {
-    color: #a6e34d; /* Highlight color */
+    color: #50fa7b; /* Highlight color */
     font-size: 2.5em;
     margin-top: 0;
     margin-bottom: 30px;
@@ -380,7 +380,7 @@ body {
 }
 
 .contact-section h2 {
-    color: #a6e34d; /* Highlight color */
+    color: #50fa7b; /* Highlight color */
     font-size: 2.3em;
     margin-top: 0;
     margin-bottom: 30px;
