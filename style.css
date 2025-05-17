@@ -373,6 +373,18 @@ body {
             border-color: #6B8E23;
             color: #fff;
         }
+        /* Contact Section */
+.contact-section {
+    width: 100%;
+    max-width: 1000px; /* Adjust as needed */
+}
+
+.contact-section h2 {
+    color: #a6e34d; /* Highlight color */
+    font-size: 2.3em;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
 /* Footer / Social Icons */
 body {
     background-color: #222;
