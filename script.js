@@ -74,13 +74,11 @@ document.addEventListener('DOMContentLoaded', function () {
 document.addEventListener('DOMContentLoaded', function() {
   const scrollTopBtn = document.getElementById('scrollTopBtn');
 
+  if (!scrollTopBtn) return; // Prevents error if button is missing
+
   // Show/hide the button based on scroll position
   window.addEventListener('scroll', function() {
-    if (window.scrollY > 300) { // Adjust the scroll threshold as needed
-      scrollTopBtn.style.display = 'inline-block';
-    } else {
-      scrollTopBtn.style.display = 'none';
-    }
+    scrollTopBtn.style.display = window.scrollY > 300 ? 'inline-block' : 'none';
   });
 
   // Smooth scrolling to the top when the button is clicked
