@@ -1,35 +1,35 @@
-// script.js
 document.addEventListener('DOMContentLoaded', function () {
+    // --- Responsive Layout ---
     function updateLayout() {
         const viewportWidth = window.innerWidth;
         const nav = document.querySelector('nav ul');
         const navToggle = document.querySelector('.nav-toggle');
 
-        // Navigation layout
-        if (viewportWidth <= 768) {
-            nav.style.flexDirection = 'column';
-            nav.style.alignItems = 'flex-start';
-            nav.querySelectorAll('li').forEach(item => {
-                item.style.marginLeft = '0';
-                item.style.marginBottom = '10px';
-            });
-            if (navToggle) {
-                nav.style.display = 'none';
-                navToggle.onclick = () => {
-                    nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
-                };
+        if (nav) {
+            if (viewportWidth <= 768) {
+                nav.style.flexDirection = 'column';
+                nav.style.alignItems = 'flex-start';
+                nav.querySelectorAll('li').forEach(item => {
+                    item.style.marginLeft = '0';
+                    item.style.marginBottom = '10px';
+                });
+                if (navToggle) {
+                    nav.style.display = 'none';
+                    navToggle.onclick = () => {
+                        nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
+                    };
+                }
+            } else {
+                nav.style.flexDirection = 'row';
+                nav.style.alignItems = 'center';
+                nav.querySelectorAll('li').forEach((item, index) => {
+                    item.style.marginLeft = index > 0 ? '20px' : '0';
+                    item.style.marginBottom = '0';
+                });
+                if (navToggle) nav.style.display = 'flex';
             }
-        } else {
-            nav.style.flexDirection = 'row';
-            nav.style.alignItems = 'center';
-            nav.querySelectorAll('li').forEach((item, index) => {
-                item.style.marginLeft = index > 0 ? '20px' : '0';
-                item.style.marginBottom = '0';
-            });
-            if (navToggle) nav.style.display = 'flex';
         }
 
-        // About Me layout
         const aboutMeSection = document.querySelector('.about-me-section');
         if (aboutMeSection) {
             aboutMeSection.style.flexDirection = viewportWidth <= 768 ? 'column' : 'row';
@@ -42,7 +42,6 @@ document.addEventListener('DOMContentLoaded', function () {
             if (textDiv) textDiv.style.textAlign = 'left';
         }
 
-        // Skills Grid
         const skillsGrid = document.querySelector('.skills-grid');
         if (skillsGrid) {
             skillsGrid.style.gridTemplateColumns = viewportWidth <= 600
@@ -50,14 +49,12 @@ document.addEventListener('DOMContentLoaded', function () {
                 : 'repeat(auto-fit, minmax(100px, 1fr))';
         }
 
-        // Education Grid
         document.querySelectorAll('.education-grid').forEach(grid => {
             grid.style.gridTemplateColumns = viewportWidth <= 600
                 ? '1fr'
                 : 'repeat(auto-fit, minmax(300px, 1fr))';
         });
 
-        // Projects Grid
         const projectsGrid = document.querySelector('.projects-grid');
         if (projectsGrid) {
             projectsGrid.style.gridTemplateColumns = viewportWidth <= 600
@@ -68,49 +65,83 @@ document.addEventListener('DOMContentLoaded', function () {
 
     updateLayout();
     window.addEventListener('resize', updateLayout);
-});
 
-//scroll topbtn
-document.addEventListener('DOMContentLoaded', function() {
-  const scrollTopBtn = document.getElementById('scrollTopBtn');
+    // --- Scroll to Top Button ---
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
 
-  if (!scrollTopBtn) return; // Prevents error if button is missing
+    if (scrollTopBtn) {
+        // Show/hide the button based on scroll position
+        window.addEventListener('scroll', function () {
+            scrollTopBtn.style.display = window.scrollY > 300 ? 'inline-block' : 'none';
+        });
 
-  // Show/hide the button based on scroll position
-  window.addEventListener('scroll', function() {
-    scrollTopBtn.style.display = window.scrollY > 300 ? 'inline-block' : 'none';
-  });
-
-  // Smooth scrolling to the top when the button is clicked
-  scrollTopBtn.addEventListener('click', function(e) {
-    e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
-  });
-});
-
-// welcome
-
-document.addEventListener('DOMContentLoaded', function () {
-  const percentDisplay = document.getElementById('loading-percentage');
-  const progressBar = document.getElementById('progress-bar');
-  const loaderWrapper = document.getElementById('loader-wrapper');
-  const content = document.getElementById('content');
-
-  let percent = 0;
-  const interval = setInterval(() => {
-    percent++;
-    percentDisplay.textContent = percent + '%';
-    progressBar.style.width = percent + '%';
-
-    if (percent >= 100) {
-      clearInterval(interval);
-      loaderWrapper.style.display = 'none';
-      content.style.display = 'block';
-      content.classList.remove('hidden');
-      content.classList.add('visible');
+        // Smooth scrolling to the top when the button is clicked
+        scrollTopBtn.addEventListener('click', function (e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     }
-  }, 30) // Adjust for speed
+
+    // --- Welcome Loader and Content Transition ---
+    const percentDisplay = document.getElementById('loading-percentage');
+    const progressBar = document.getElementById('progress-bar');
+    const loaderWrapper = document.getElementById('loader-wrapper');
+    const content = document.getElementById('content');
+    const body = document.body;
+
+    let percentage = 0;
+    const interval = setInterval(() => {
+        if (percentDisplay && progressBar) {
+            percentage++;
+            percentDisplay.textContent = percentage + '%';
+            progressBar.style.width = percentage + '%';
+        }
+
+        if (percentage >= 100) {
+            clearInterval(interval);
+            setTimeout(() => {
+                if (loaderWrapper) {
+                    loaderWrapper.style.opacity = '0';
+                    setTimeout(() => {
+                        if (loaderWrapper) {
+                            loaderWrapper.style.display = 'none';
+                        }
+                        if (content) {
+                            content.style.opacity = '1';
+                        }
+                        if (body) {
+                            body.style.overflow = 'auto'; // Enable scrolling
+                        }
+                    }, 500); // Fade-out duration
+                } else if (content && body) {
+                    content.style.opacity = '1'; // If no loader, just show content
+                    body.style.overflow = 'auto';
+                }
+            }, 1000); // Delay before fade-out
+        }
+    }, 30); // Adjust loading speed
+
+    // --- Responsive Navigation ---
+    const navToggle = document.querySelector('.nav-toggle');
+    const nav = document.querySelector('nav ul');
+
+    if (navToggle && nav) {
+        navToggle.addEventListener('click', () => {
+            nav.classList.toggle('open');
+        });
+    }
+
+    function updateLayoutForNavigation() {
+        const viewportWidth = window.innerWidth;
+        if (nav && nav.classList) {
+            if (viewportWidth > 768 && nav.classList.contains('open')) {
+                nav.classList.remove('open');
+            }
+        }
+    }
+
+    window.addEventListener('resize', updateLayoutForNavigation);
 });
