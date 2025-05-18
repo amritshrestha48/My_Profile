@@ -117,28 +117,28 @@ section + section { /* Selects all section elements that are preceded by another
     background: linear-gradient(to bottom right,#ca8a13, #1f51a2); /* Python Django */
 }
 .skill-item:nth-child(2) {
-    background-color: #000; /* Git */
+    background: linear-gradient(to bottom right, #040208, #0e0bcb); /* Database */
 }
 .skill-item:nth-child(3) {
-    background: linear-gradient(to bottom right, #8e5530, #c8c333); /* HTML */
+    background: linear-gradient(to bottom right, #082b22, #4e4c8d); /* Api */
 }
 .skill-item:nth-child(4) {
-    background: linear-gradient(to bottom right, #251701, #ec740c); /* CSS */
+    background: linear-gradient(to bottom right, #696363, #000); /* Git */
 }
 .skill-item:nth-child(5) {
-    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Database */
+    background: linear-gradient(to bottom right, #053448, #0d65c2); /* sk */
 }
 .skill-item:nth-child(6) {
-    background: linear-gradient(to bottom right, #ff6600, #ff9933); /* Api */
+    background: linear-gradient(to bottom right, #a96d32, #501e03); /* tensor */
 }
 .skill-item:nth-child(7) {
-    background: linear-gradient(to bottom right, #29abe2, #007bff); /* sk */
+    background: linear-gradient(to bottom right, #ae6822, #2f1304); /* Pytouch */
 }
 .skill-item:nth-child(8) {
-    background: linear-gradient(to bottom right, #f57c00, #e65100); /* tensor */
+    background: linear-gradient(to bottom right, #8e5530, #c8c333); /* HTML */
 }
 .skill-item:nth-child(9) {
-    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Pytouch */
+    background: linear-gradient(to bottom right, #251701, #ec740c); /* CSS */
 }
 
 /* Education Section */
