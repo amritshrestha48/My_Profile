@@ -24,6 +24,49 @@ section + section { /* Selects all section elements that are preceded by another
   margin-top: 8px; /* Adjust the value as needed */
 }
 
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    body {
+        padding: 10px; /* Less padding on smaller screens */
+    }
+
+    .about-me-section {
+        flex-direction: column; /* Stack elements */
+        align-items: center; /* Center content */
+    }
+
+    .about-me-image {
+        max-width: 100%; /* Full width on small screens */
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller grid items */
+    }
+
+    .my-button {
+        font-size: 12px; /* Smaller button text */
+        padding: 8px 12px; /* Adjusted padding */
+    }
+
+    section {
+        margin-bottom: 15px; /* Adjusted margin */
+    }
+}
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    display: none; /* hidden by default, shown on toggle */
+  }
+  nav ul.open {
+    display: flex;
+  }
+  /* Adjust other sections similarly */
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 /* About Me Section */
 .about-me-section {
     display: flex;
@@ -606,66 +649,4 @@ body {
   to {
     opacity: 1;
   }
-}
-/* For smaller screens (up to 768px wide) */
-@media (max-width: 768px) {
-  /* Apply different styles here */
-  .container {
-    width: 100%;
-    padding: 10px;
-  }
-  .column {
-    flex-basis: 100%;
-  }
-}
-
-/* For larger screens (min-width: 769px) */
-@media (min-width: 769px) {
-  /* Apply desktop-specific styles */
-  .container {
-    width: 960px;
-    margin: 0 auto;
-  }
-  .column {
-    flex-basis: 50%;
-  }
-}
-
-nav ul.open {
-    display: flex !important; /* Override display: none */
-    flex-direction: column;
-    align-items: flex-start;
-    width: 100%;
-    margin-top: 10px;
-    border-top: 1px solid #555;
-}
-
-nav ul.open li {
-    margin-left: 0 !important;
-    margin-bottom: 10px;
-}
-
-nav ul.open li a {
-    display: block;
-    width: 100%;
-    padding: 10px 15px;
-    border-radius: 0;
-}
-
-/* Ensure the toggle button is visible on smaller screens */
-@media (max-width: 768px) {
-    .nav-toggle {
-        display: block !important; /* Make sure it's visible */
-    }
-    nav ul {
-        display: none; /* Initially hidden, toggled by JS */
-        /* ... other mobile nav styles ... */
-    }
-}
-
-/* Hide the toggle button on larger screens */
-@media (min-width: 769px) {
-    .nav-toggle {
-        display: none !important;
-    }
 }
