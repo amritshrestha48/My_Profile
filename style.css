@@ -126,19 +126,19 @@ section + section { /* Selects all section elements that are preceded by another
     background: linear-gradient(to bottom right, #251701, #ec740c); /* CSS */
 }
 .skill-item:nth-child(5) {
-    background-color: #616161; /* API */
+    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Database */
 }
 .skill-item:nth-child(6) {
-    background: linear-gradient(to bottom right, #ff6600, #ff9933); /* HTML */
+    background: linear-gradient(to bottom right, #ff6600, #ff9933); /* Api */
 }
 .skill-item:nth-child(7) {
-    background: linear-gradient(to bottom right, #29abe2, #007bff); /* CSS */
+    background: linear-gradient(to bottom right, #29abe2, #007bff); /* sk */
 }
 .skill-item:nth-child(8) {
-    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Post */
+    background: linear-gradient(to bottom right, #f57c00, #e65100); /* tensor */
 }
 .skill-item:nth-child(9) {
-    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Post */
+    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Pytouch */
 }
 
 /* Education Section */
