@@ -451,11 +451,11 @@ body {
   display: none; /* Hidden by default */
   width: 35px;
   height: 38px;
-  background-color: #00ff00; /* Bright green background */
+  background-color: #05dd05; /* Bright green background */
   border-radius: 5%;
   position: fixed;
-  bottom: 40px;
-  right: 35px;
+  bottom: 45px;
+  right: 40px;
   text-decoration: none;
   opacity: 0.7;
   transition: opacity 0.3s ease-in-out;
