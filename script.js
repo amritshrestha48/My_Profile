@@ -1,95 +1,76 @@
 // script.js
-
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     function updateLayout() {
         const viewportWidth = window.innerWidth;
         const nav = document.querySelector('nav ul');
-        const navToggle = document.querySelector('.nav-toggle'); // You'll need to add this element in your HTML
+        const navToggle = document.querySelector('.nav-toggle');
 
-        // Example for smaller screens: make the navigation vertical
+        // Navigation layout
         if (viewportWidth <= 768) {
             nav.style.flexDirection = 'column';
             nav.style.alignItems = 'flex-start';
-            const navItems = nav.querySelectorAll('li');
-            navItems.forEach(item => {
+            nav.querySelectorAll('li').forEach(item => {
                 item.style.marginLeft = '0';
                 item.style.marginBottom = '10px';
             });
-
-            // If you have a toggle button, you can add functionality here
             if (navToggle) {
-                nav.style.display = 'none'; // Initially hide the nav
-                navToggle.addEventListener('click', () => {
+                nav.style.display = 'none';
+                navToggle.onclick = () => {
                     nav.style.display = nav.style.display === 'none' ? 'flex' : 'none';
-                });
+                };
             }
         } else {
-            // Reset styles for larger screens
             nav.style.flexDirection = 'row';
             nav.style.alignItems = 'center';
-            const navItems = nav.querySelectorAll('li');
-            navItems.forEach((item, index) => {
+            nav.querySelectorAll('li').forEach((item, index) => {
                 item.style.marginLeft = index > 0 ? '20px' : '0';
                 item.style.marginBottom = '0';
             });
-            if (navToggle) {
-                nav.style.display = 'flex'; // Show nav on larger screens
-            }
+            if (navToggle) nav.style.display = 'flex';
         }
 
-        // Example for adjusting image sizes or layouts
-        const homeSection = document.querySelector('.home-section');
+        // About Me layout
         const aboutMeSection = document.querySelector('.about-me-section');
-        const skillsGrid = document.querySelector('.skills-grid');
-        const educationGrid = document.querySelectorAll('.education-grid');
-        const projectsGrid = document.querySelector('.projects-grid');
-
-        if (homeSection) {
-            const homeContent = homeSection.nextElementSibling;
-            const imageContainer = homeContent.querySelector('div:last-child');
-            if (viewportWidth <= 600 && imageContainer) {
-                imageContainer.style.marginTop = '20px';
-                imageContainer.style.paddingLeft = '0';
-            } else if (imageContainer) {
-                imageContainer.style.marginTop = '0';
-                imageContainer.style.paddingLeft = '20px';
-            }
-        }
-
         if (aboutMeSection) {
             aboutMeSection.style.flexDirection = viewportWidth <= 768 ? 'column' : 'row';
             const imageDiv = aboutMeSection.querySelector('.about-me-image');
             const textDiv = aboutMeSection.querySelector('.about-me-text');
-            if (viewportWidth <= 768) {
-                imageDiv.style.marginRight = '0';
-                imageDiv.style.marginBottom = '20px';
-                textDiv.style.textAlign = 'left';
-            } else {
-                imageDiv.style.marginRight = '40px';
-                imageDiv.style.marginBottom = '0';
-                textDiv.style.textAlign = 'left';
+            if (imageDiv) {
+                imageDiv.style.marginRight = viewportWidth <= 768 ? '0' : '40px';
+                imageDiv.style.marginBottom = viewportWidth <= 768 ? '20px' : '0';
             }
+            if (textDiv) textDiv.style.textAlign = 'left';
         }
 
+        // Skills Grid
+        const skillsGrid = document.querySelector('.skills-grid');
         if (skillsGrid) {
-            skillsGrid.style.gridTemplateColumns = viewportWidth <= 600 ? 'repeat(auto-fit, minmax(80px, 1fr))' : 'repeat(auto-fit, minmax(100px, 1fr))';
+            skillsGrid.style.gridTemplateColumns = viewportWidth <= 600
+                ? 'repeat(auto-fit, minmax(80px, 1fr))'
+                : 'repeat(auto-fit, minmax(100px, 1fr))';
         }
 
-        educationGrid.forEach(grid => {
-            grid.style.gridTemplateColumns = viewportWidth <= 600 ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))';
+        // Education Grid
+        document.querySelectorAll('.education-grid').forEach(grid => {
+            grid.style.gridTemplateColumns = viewportWidth <= 600
+                ? '1fr'
+                : 'repeat(auto-fit, minmax(300px, 1fr))';
         });
 
+        // Projects Grid
+        const projectsGrid = document.querySelector('.projects-grid');
         if (projectsGrid) {
-            projectsGrid.style.gridTemplateColumns = viewportWidth <= 600 ? '1fr' : 'repeat(auto-fit, minmax(300px, 1fr))';
+            projectsGrid.style.gridTemplateColumns = viewportWidth <= 600
+                ? '1fr'
+                : 'repeat(auto-fit, minmax(300px, 1fr))';
         }
     }
 
-    // Run on initial load
     updateLayout();
-
-    // Run on window resize
     window.addEventListener('resize', updateLayout);
 });
+
+//scroll topbtn
 document.addEventListener('DOMContentLoaded', function() {
   const scrollTopBtn = document.getElementById('scrollTopBtn');
 
