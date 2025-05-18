@@ -114,16 +114,16 @@ section + section { /* Selects all section elements that are preceded by another
 
 /* Specific background colors for skill icons (optional) */
 .skill-item:nth-child(1) {
-    background: linear-gradient(to bottom right, #6dd5ed, #2193b0); /* Flutter */
+    background: linear-gradient(to bottom right,#ca8a13, #1f51a2); /* Python Django */
 }
 .skill-item:nth-child(2) {
     background-color: #000; /* Git */
 }
 .skill-item:nth-child(3) {
-    background: linear-gradient(to bottom right, #00c6fb, #005bea); /* Dart */
+    background: linear-gradient(to bottom right, #8e5530, #c8c333); /* HTML */
 }
 .skill-item:nth-child(4) {
-    background: linear-gradient(to bottom right, #ff9800, #fb5607); /* Firebase */
+    background: linear-gradient(to bottom right, #251701, #ec740c); /* CSS */
 }
 .skill-item:nth-child(5) {
     background-color: #616161; /* API */
@@ -135,6 +135,9 @@ section + section { /* Selects all section elements that are preceded by another
     background: linear-gradient(to bottom right, #29abe2, #007bff); /* CSS */
 }
 .skill-item:nth-child(8) {
+    background: linear-gradient(to bottom right, #f57c00, #e65100); /* Post */
+}
+.skill-item:nth-child(9) {
     background: linear-gradient(to bottom right, #f57c00, #e65100); /* Post */
 }
 
