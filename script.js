@@ -122,7 +122,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 }
             }, 1000); // Delay before fade-out
         }
-    }, 30); // Adjust loading speed
+    }, 25); // Adjust loading speed
 
     // --- Responsive Navigation ---
     const navToggle = document.querySelector('.nav-toggle');
