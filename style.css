@@ -43,13 +43,6 @@ section + section { /* Selects all section elements that are preceded by another
     .skills-grid {
         grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /*Smaller grid items */
     }
-    .education-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /*Smaller grid items */
-    }
-    .work-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));  /*Smaller grid items */
-    }
-
 
     .my-button {
         font-size: 12px; /*Smaller button text */
