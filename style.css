@@ -26,6 +26,9 @@ section + section { /* Selects all section elements that are preceded by another
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
+    .degree-tittle {
+        font-weight: 700;
+    }
     body {
         padding: 10px; /* Less padding on smaller screens */
     }
@@ -65,6 +68,10 @@ section + section { /* Selects all section elements that are preceded by another
 img {
   max-width: 100%;
   height: auto;
+}
+
+.degree-title {
+    font-weight: 700 !important;
 }
 
 /* About Me Section */
