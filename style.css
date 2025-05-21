@@ -24,54 +24,47 @@ section + section { /* Selects all section elements that are preceded by another
   margin-top: 8px; /* Adjust the value as needed */
 }
 
-/* Responsive Adjustments */
+
+/*Responsive Adjustments */
 @media (max-width: 768px) {
-    .degree-tittle {
-        font-weight: 700;
-    }
     body {
-        padding: 10px; /* Less padding on smaller screens */
+        padding: 10px;
     }
 
     .about-me-section {
-        flex-direction: column; /* Stack elements */
-        align-items: center; /* Center content */
+        flex-direction: column;
+        align-items: center;
     }
 
     .about-me-image {
-        max-width: 100%; /* Full width on small screens */
+        max-width: 100%;
     }
 
     .skills-grid {
-        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Smaller grid items */
+        grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     }
 
     .my-button {
-        font-size: 12px; /* Smaller button text */
-        padding: 8px 12px; /* Adjusted padding */
+        font-size: 12px;
+        padding: 8px 12px;
     }
 
     section {
-        margin-bottom: 15px; /* Adjusted margin */
+        margin-bottom: 15px;
     }
-}
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    display: none; /* hidden by default, shown on toggle */
-  }
-  nav ul.open {
-    display: flex;
-  }
-  /* Adjust other sections similarly */
+
+    nav ul {
+        flex-direction: column;
+        display: none;
+    }
+
+    nav ul.open {
+        display: flex;
+    }
 }
 img {
   max-width: 100%;
   height: auto;
-}
-
-.degree-title {
-    font-weight: 700 !important;
 }
 
 /* About Me Section */
