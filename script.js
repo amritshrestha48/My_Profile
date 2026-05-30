@@ -110,7 +110,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   /* ── 3. HEROS CHARACTER TYPING MATRIX ── */
   const typingTarget = document.getElementById("typing-target");
-  const professionMatrix = ["PYTHON DEVELOPER", "LECTURER", "AI RESEARCH LAB Scholar"];
+  const professionMatrix = ["PYTHON DEVELOPER", "LECTURER", "AI RESEARCHER"];
   let matrixIndex = 0, characterIndex = 0, dynamicDeletion = false;
 
   function processTypingLoop() {
